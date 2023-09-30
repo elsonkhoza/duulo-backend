@@ -1,9 +1,6 @@
 package com.duulo.server.user;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.proxy.HibernateProxy;
 
@@ -18,8 +15,9 @@ import java.util.Objects;
 @Table(name = "users")
 public class User {
     @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @Column(name = "user_id", nullable = false)
-    private String id;
+    private Long id;
 
     @Column(name = "user_name")
     private  String name;
@@ -30,6 +28,4 @@ public class User {
     @Column(name="user_password")
     private  String password;
 
-    @Column(name="verification_status")
-    private boolean isVerified;
 }
