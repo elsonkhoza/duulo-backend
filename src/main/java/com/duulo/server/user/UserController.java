@@ -1,6 +1,6 @@
 package com.duulo.server.user;
 
-import com.duulo.server.utils.EmailSender;
+import com.duulo.server.utils.email.EmailSender;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

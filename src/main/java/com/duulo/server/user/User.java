@@ -1,11 +1,8 @@
 package com.duulo.server.user;
 
+import com.duulo.server.profile.Profile;
 import jakarta.persistence.*;
 import lombok.*;
-import org.hibernate.proxy.HibernateProxy;
-
-import java.nio.file.attribute.UserPrincipal;
-import java.util.Objects;
 
 @Getter
 @Setter
@@ -30,5 +27,10 @@ public class User {
 
     @Column(name = "verification_token")
     private String verificationToken;
+
+    @OneToOne
+    @JoinColumn(name = "profile_id",
+    referencedColumnName = "id")
+    Profile profile;
 
 }
