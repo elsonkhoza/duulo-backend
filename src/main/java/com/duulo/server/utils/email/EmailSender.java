@@ -1,4 +1,4 @@
-package com.duulo.server.utils;
+package com.duulo.server.utils.email;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
